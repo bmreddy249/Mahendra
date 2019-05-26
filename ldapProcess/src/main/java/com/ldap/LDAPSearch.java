@@ -22,6 +22,7 @@ public class LDAPSearch
         lc.connect(serverHost, port );
         lc.bind( LDAPConnection.LDAP_V3, loginDN,  password.getBytes("UTF8"));
         return lc;
+        
 	}
 	
 	@SuppressWarnings("rawtypes")
@@ -133,6 +134,7 @@ public class LDAPSearch
 		} catch (Exception e) {
 			
 			e.printStackTrace();
+			System.out.println("Ldap p...");
 			System.out.println("Error " + e.toString() );
 		}
     }
